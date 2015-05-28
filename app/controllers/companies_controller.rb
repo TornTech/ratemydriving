@@ -41,7 +41,10 @@ class CompaniesController < ApplicationController
     company = Company.find(params[:id]).destroy
     # flash[:notice] = "#{auction.title} has been deleted."
     redirect_to companies_path
+  end
 
+  def show
+    @company = Company.find(params[:id])
   end
 
   private 
