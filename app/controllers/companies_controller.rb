@@ -14,7 +14,6 @@ class CompaniesController < ApplicationController
     if @company.save
       # flash[:notice] = "#{@company.title} has been successfully submitted."
       redirect_to companies_path
-
     else
       # flash.now[:alert] = "Please make sure all fields are filled in correctly :)"
       render "new"
@@ -32,7 +31,6 @@ class CompaniesController < ApplicationController
     if @company.save
       # flash[:notice] = "#{@company.title} has been successfully submitted."
       redirect_to companies_path
-
     else
       # flash.now[:alert] = "Please make sure all fields are filled in correctly :)"
       render "edit"
