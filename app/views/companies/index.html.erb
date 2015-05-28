@@ -1,1 +1,10 @@
-Hi ben
+<%= @text %>
+<br>
+<ul>
+<% @companies.each do |company| %>
+  <li>
+    <%= company.name %>
+    <%= company.email %>
+  </li>
+<% end %>
+</ul>
