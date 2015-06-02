@@ -1,14 +1,17 @@
-<%= @text %>
-<br>
-<ul>
-  <% @companies.each do |company| %>
-    <li>
-      <%= company.id %>
-      <%= company.name %>
-      <%= company.email %>
-      <%= link_to("Edit", edit_company_path(company)) %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to("New", new_company_path, :class => "button") %>
-
+<div class="row">
+  <div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns">
+    <%= @text %>
+    <br>
+    <ul>
+      <% @companies.each do |company| %>
+        <li>
+          <%= company.id %>
+          <%= company.name %>
+          <%= company.email %>
+          <%= link_to("Edit", edit_company_path(company)) %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to("New", new_company_path, :class => "button") %>
+  </div>  
+</div>
