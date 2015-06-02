@@ -10,12 +10,13 @@
         <%= f.input :phone %>
         <div class="button-holder">
           <%= f.button :submit, :class => "button" %>
+
+          <% if @company.id %>
+            <%= link_to "Delete", { :id => @company.id, :action => :destroy }, :method => :delete, data: { confirm: "Are you sure?  You're about to delete this company..." }, :class => "button alert" %>
+          <% end %> 
         </div>
       <% end %>
 
-      <% if @company.id %>
-        <%= link_to "Delete", { :id => @company.id, :action => :destroy }, :method => :delete, data: { confirm: "Are you sure?  You're about to delete this company..." } %>
-      <% end %> 
 
     </div>
   </div>
