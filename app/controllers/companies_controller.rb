@@ -1,7 +1,7 @@
 class CompaniesController < ApplicationController
   def index
     @text = "Company list:"
-    @companies = Company.all
+    @companies = Company.order("name ASC")
   end
 
   def new
