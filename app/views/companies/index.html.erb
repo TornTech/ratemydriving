@@ -1,11 +1,14 @@
 <%= @text %>
 <br>
 <ul>
-<% @companies.each do |company| %>
-  <li>
-    <%= company.id %>
-    <%= company.name %>
-    <%= company.email %>
-  </li>
-<% end %>
+  <% @companies.each do |company| %>
+    <li>
+      <%= company.id %>
+      <%= company.name %>
+      <%= company.email %>
+      <%= link_to("Edit", edit_company_path(company)) %>
+    </li>
+  <% end %>
 </ul>
+<%= link_to("New", new_company_path, :class => "button") %>
+
