@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns">
+    <%= @text %>
+    <br>
+    <ul>
+      <% @cars.each do |car| %>
+        <li>
+          <%= car.id %>
+          <%= car.code %>
+          <%= link_to("Edit", edit_car_path(car)) %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to("New", new_car_path, :class => "button") %>
+  </div>  
+</div>
