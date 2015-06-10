@@ -8,6 +8,7 @@
           <%= car.id %>
           <%= car.code %>
           <%= link_to("Edit", edit_car_path(car)) %>
+          <%= link_to "Delete", { :id => car.id, :action => :destroy }, :method => :delete, data: { confirm: "Are you sure?  You're about to delete this car..." } %>
         </li>
       <% end %>
     </ul>

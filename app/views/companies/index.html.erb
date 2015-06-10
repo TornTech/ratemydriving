@@ -9,6 +9,7 @@
           <%= company.name %>
           <%= company.email %>
           <%= link_to("Edit", edit_company_path(company)) %>
+          <%= link_to "Delete", { :id => company.id, :action => :destroy }, :method => :delete, data: { confirm: "Are you sure?  You're about to delete this company..." } %>
         </li>
       <% end %>
     </ul>
