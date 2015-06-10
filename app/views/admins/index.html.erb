@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns">
+    <h1>Admin</h1>
+    <%= @text %>
+    <ul>
+      <% @companies.each do |company| %>
+        <li>
+          <%= company.id %>
+          <%= company.name %>
+          <%= company.email %>
+          <%= link_to("Edit", edit_company_path(company)) %>
+          <%= link_to "Delete", company_path(company), :method => :delete, data: { confirm: "Are you sure?  You're about to delete this company..." } %>
+        </li>
+      <% end %>
+    </ul>
+    <%= link_to("New", new_company_path, :class => "button") %>
+  </div>  
+</div>
