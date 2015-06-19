@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $("body").on("click", ".code-box-button", function() {
-    console.log($(".code-box-input").val())
+    var code = $(".code-box-input").val()
+    window.location = "/submit/" + code
   })
 });
