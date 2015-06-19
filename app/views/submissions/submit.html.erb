@@ -3,13 +3,27 @@
     <div class="small-12 medium-8 medium-offset-2 large-6 large-offset-3 columns">
     
         
-        <p>Code: <%= @car.code %></p>
-        <p>Company: <%= @car.company.name %></p> 
-        <p>Make: <%= @car.make %></p>
-        <p>Model: <%= @car.model %></p>
-        <p>License Plate: <%= @car.license_plate %></p>
+      <p>Code: <%= @car.code %></p>
+      <p>Company: <%= @car.company.name %></p> 
+      <p>Make: <%= @car.make %></p>
+      <p>Model: <%= @car.model %></p>
+      <p>License Plate: <%= @car.license_plate %></p>
 
 
+      <h1>Enter info</h1>
+
+      <%= simple_form_for @submission, :url => create_submission_path do |f| %>
+        <%= f.input :name %>
+        <%= f.input :phone %>
+        <%= f.input :email %>
+        <%= f.input :complaint %>
+
+        <div class="button-holder">
+          <%= f.button :submit, :class => "button" %>
+
+          
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
