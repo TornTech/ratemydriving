@@ -47,10 +47,6 @@ class CarsController < ApplicationController
     @car = Car.find(params[:id])
   end
 
-  def submit
-
-  end
-
   private 
 
   def car_params

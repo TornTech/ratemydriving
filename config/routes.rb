@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "admin" => "admins#index", as: :admin
   get "about" => "pages#about", as: :about
   get "contact" => "pages#contact", as: :contact
-  get "submit/:code" => "cars#submit", as: :submit
+  get "submit/:code" => "submissions#submit", as: :submit
 
 
   # The priority is based upon order of creation: first created -> highest priority.
