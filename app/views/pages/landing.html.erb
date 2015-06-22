@@ -7,8 +7,18 @@
             <input class="code-box-input" type="text" placeholder="Enter code">
           </div>
           <div class="small-1 columns">
-            <a href="#" class="button postfix code-box-button">Go</a>
+            <a class="button postfix code-box-button">Go</a>
           </div>
+          
+          <% if alert %>
+            <div class="small-11 columns">
+              <div class="alert-code">
+                <%= alert %>                
+              </div>
+            </div>
+            <div class="small-1 columns">
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

@@ -1,6 +1,12 @@
 class SubmissionsController < ApplicationController
   def submit 
     @car = Car.find_by_code(params[:code])
+
+    if @car.nil?
+      flash[:alert] = "That code does not exist"
+      redirect_to root_path
+    end
+
     @submission = Submission.new
   end
 
@@ -23,7 +29,8 @@ class SubmissionsController < ApplicationController
       :name,
       :email,
       :phone,
-      :complaint
+      :complaint,
+      :car_id
     )
   end
 end
