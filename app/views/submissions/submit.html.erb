@@ -9,7 +9,6 @@
       <p>Model: <%= @car.model %></p>
       <p>License Plate: <%= @car.license_plate %></p>
 
-
       <h1>Enter info</h1>
 
       <%= simple_form_for @submission, :url => create_submission_path do |f| %>
@@ -17,6 +16,7 @@
         <%= f.input :phone %>
         <%= f.input :email %>
         <%= f.input :complaint %>
+        <%= f.input :car_id, :as => :hidden, :input_html => { :value => @car.id } %> 
 
         <div class="button-holder">
           <%= f.button :submit, :class => "button" %>
