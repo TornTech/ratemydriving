@@ -1,27 +1,35 @@
 <div class="landing-image-holder">
   <div class="code-box">
-    <div class="row">
-      <div class="small-12 medium-8 large-6 columns">
-        <div class="row collapse">
-          <div class="small-11 columns">
-            <input class="code-box-input" type="text" placeholder="Enter code">
-          </div>
-          <div class="small-1 columns">
-            <a class="button postfix code-box-button">Go</a>
-          </div>
-          
-          <% if alert %>
-            <div class="small-11 columns">
-              <div class="alert-code">
-                <%= alert %>                
+    <form>
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="row collapse">
+            <div class="small-10 columns">
+              <input class="code-box-input" type="text" placeholder="Enter code">
+            </div>
+            <div class="small-2 columns">
+              <a class="button postfix code-box-button">Go</a>
+            </div>
+            <div class="small-10 columns">
+              <div class="alert-code no-code-error-holder">
+                 Please enter code                 
               </div>
             </div>
-            <div class="small-1 columns">
+            <div class="small-2 columns no-code-error-holder">
             </div>
-          <% end %>
+            <% if alert %>
+              <div class="small-10 columns">
+                <div class="alert-code">
+                  <%= alert %>                
+                </div>
+              </div>
+              <div class="small-2 columns">
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
   <%= image_tag "https://s3-us-west-2.amazonaws.com/rate-my-driving/truck.jpg" %>
 </div>
