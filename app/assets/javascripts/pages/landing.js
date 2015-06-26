@@ -1,6 +1,14 @@
-$(document).ready(function() {
+$(document).ready(codeBox);
+$(document).on('page:load', codeBox);
+
+function codeBox() {
   $("body").on("click", ".code-box-button", function() {
     var code = $(".code-box-input").val()
-    window.location = "/submit/" + code
+    if (code == "") {
+      $(".alert-code").hide()
+      $(".no-code-error-holder").show()
+    } else {
+      window.location = "/submit/" + code
+    }
   })
-});
+}
