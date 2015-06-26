@@ -1,6 +1,6 @@
 class SubmissionsController < ApplicationController
   def submit 
-    @car = Car.find_by_code(params[:code])
+    @car = Car.find_by_code(params[:code].upcase)
 
     if @car.nil?
       flash[:alert] = "That code does not exist"
