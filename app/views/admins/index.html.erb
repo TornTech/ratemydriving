@@ -1,24 +1,31 @@
 <div class="row">
   <div class="large-4 columns">
-    <div class="cars-list-admin">
-    words
+    <div class="companies-list-admin">
+    <%= @text %>
+      <% @companies.each do |company| %>
+        <div class="companies-list-admin-rows" data-company-id="company<%= company.id %>">
+          <%= company.name %>
+          <%= link_to("Edit", edit_company_path(company)) %>
+          <%= link_to "Delete", company_path(company), :method => :delete, data: { confirm: "Are you sure?  You're about to delete this company..." } %>
+        </div>
+      <% end %>
     </div>
   </div>
   <div class="large-8 columns">
-    <div class="companies-list-admin">
-    words
+    <div class="cars-list-admin ">
+      <% @companies.each do |company| %>
+        <div class="company<%= company.id %>">
+          <% company.cars.each do |car| %>
+            <div class="cars-list-admin-rows">
+              <%= car.id %>
+              <%= car.code %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 
 
 
