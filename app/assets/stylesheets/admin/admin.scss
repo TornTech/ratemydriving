@@ -1,9 +1,20 @@
 .companies-list-admin {
-  background-color: grey;
-
+  background-color: #DADADA;
+  border: 1px solid black;
 }
 
 .cars-list-admin {
-  background-color: purple;
+  background-color: #A4BEFF;
+  border: 1px solid black;
+
+}
+
+.companies-list-admin-rows {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.cars-list-admin-rows {
+  padding: 10px;
 
 }
