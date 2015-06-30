@@ -12,6 +12,11 @@
 .companies-list-admin-rows {
   padding: 10px;
   border-bottom: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: yellow;
+  }
 }
 
 .cars-list-admin-rows {
