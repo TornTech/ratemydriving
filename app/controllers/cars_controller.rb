@@ -13,7 +13,7 @@ class CarsController < ApplicationController
 
     if @car.save
       # flash[:notice] = "#{@car.title} has been successfully submitted."
-      redirect_to cars_path
+      redirect_to admin_path
     else
       # flash.now[:alert] = "Please make sure all fields are filled in correctly :)"
       render "new"
@@ -30,7 +30,7 @@ class CarsController < ApplicationController
 
     if @car.save
       # flash[:notice] = "#{@car.title} has been successfully submitted."
-      redirect_to cars_path
+      redirect_to admin_path
     else
       # flash.now[:alert] = "Please make sure all fields are filled in correctly :)"
       render "edit"
@@ -40,7 +40,7 @@ class CarsController < ApplicationController
   def destroy
     car = Car.find(params[:id]).destroy
     # flash[:notice] = "#{auction.title} has been deleted."
-    redirect_to cars_path
+    redirect_to admin_path
   end
 
   def show
