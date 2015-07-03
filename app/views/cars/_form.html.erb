@@ -4,7 +4,8 @@
       <h1><%= title %></h1>
 
       <%= simple_form_for @car do |f| %>
-        <%= f.association :company, label: "Select organization", value_method: :id, prompt: "Select organization" %>
+        <% selected_company = params[:id] ? params[:id].gsub("company", "") : 0 %>
+        <%= f.association :company, label: "Select organization", value_method: :id, prompt: "Select organization", :selected => selected_company %>
         <%= f.input :code %>
         <%= f.input :make %>
         <%= f.input :model %>
