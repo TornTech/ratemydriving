@@ -6,5 +6,7 @@ function admin() {
     var companyClass = $(this).attr("data-company-id")
     $(".cars-list-admin-section").hide()
     $("." + companyClass).show()
+    $(".companies-list-admin-selected").removeClass("companies-list-admin-selected")
+    $(this).addClass("companies-list-admin-selected")
   })
 }
