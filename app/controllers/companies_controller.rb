@@ -13,7 +13,7 @@ class CompaniesController < ApplicationController
 
     if @company.save
       # flash[:notice] = "#{@company.title} has been successfully submitted."
-      redirect_to companies_path
+      redirect_to admin_path
     else
       # flash.now[:alert] = "Please make sure all fields are filled in correctly :)"
       render "new"
@@ -30,7 +30,7 @@ class CompaniesController < ApplicationController
 
     if @company.save
       # flash[:notice] = "#{@company.title} has been successfully submitted."
-      redirect_to companies_path
+      redirect_to admin_path
     else
       # flash.now[:alert] = "Please make sure all fields are filled in correctly :)"
       render "edit"
@@ -40,7 +40,7 @@ class CompaniesController < ApplicationController
   def destroy
     company = Company.find(params[:id]).destroy
     # flash[:notice] = "#{auction.title} has been deleted."
-    redirect_to companies_path
+    redirect_to admin_path
   end
 
   def show
