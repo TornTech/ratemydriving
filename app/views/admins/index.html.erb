@@ -18,12 +18,31 @@
     <div class="cars-list-admin ">
       <% @companies.each_with_index do |company, i| %>
         <div class="cars-list-admin-section company<%= company.id %> <%= 'hide' if i != 0 %>">
-          <% company.cars.each do |car| %>
-            <div class="cars-list-admin-rows">
-              <%= car.id %>
-              <%= car.code %>
-            </div>
-          <% end %>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Code</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>License Plate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% company.cars.each do |car| %>
+                <tr>
+                  <td><%= car.id %></td>
+                  <td><%= car.code %></td>
+                  <td><%= car.make %></td>
+                  <td><%= car.model %></td>
+                  <td><%= car.color %></td>
+                  <td><%= car.license_plate %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+     
         </div>
       <% end %>
     </div>
